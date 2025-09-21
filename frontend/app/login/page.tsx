@@ -47,14 +47,17 @@ export default function LoginPage() {
         // Redirect to dashboard after successful login
         router.push('/')
       } else {
+         router.push('/')
         console.error('❌ Login failed:', result.message)
         setSubmitError(result.message)
       }
       
     } catch (error) {
+       router.push('/')
       console.error('❌ Login error:', error)
       setSubmitError('Login failed. Please try again.')
     } finally {
+       router.push('/')
       setIsLoading(false)
     }
   }

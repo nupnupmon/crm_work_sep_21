@@ -17,6 +17,7 @@ const Sidebar = () => {
     { icon: '📈', label: 'Analytics', href: '/analytics', active: pathname === '/analytics' },
     { icon: '👥', label: 'Customers', href: '/customers', active: pathname === '/customers' },
     { icon: '⚙️', label: 'Settings', href: '/settings', active: pathname === '/settings' },
+    { icon: '👥', label: 'Agents', href: '/agents', active: pathname === '/agents' },
   ]
 
   return (
