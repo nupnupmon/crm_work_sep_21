@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import Agent from '@/src/Components/pages/agent'
+import Agent from "@/src/Components/pages/agent";
 import Sidebar from "../../components/Sidebar";
 import Header from "../../components/Header";
 import { useAuth } from "../../contexts/AuthContext";
@@ -16,9 +16,8 @@ export default function AgentsPage() {
   return (
     <div className="min-h-screen bg-gray-900">
       <Sidebar />
-
       <div className="ml-20">
-        <Header user={user} onLogout={() => {}} title={'Agents'} />
+        <Header user={user} onLogout={() => {}} title={"Agents"} />
         <Agent />
       </div>
     </div>
