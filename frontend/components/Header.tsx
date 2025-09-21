@@ -6,9 +6,10 @@ import { User } from '../lib/auth'
 interface HeaderProps {
   user: User | null
   onLogout: () => void
+  title: String
 }
 
-const Header = ({ user, onLogout }: HeaderProps) => {
+const Header = ({ user, onLogout, title }: HeaderProps) => {
   const [searchQuery, setSearchQuery] = useState('')
   const [showDropdown, setShowDropdown] = useState(false)
 
@@ -39,7 +40,7 @@ const Header = ({ user, onLogout }: HeaderProps) => {
 
       {/* Dashboard Title */}
       <div className="flex-1 text-center">
-        <h1 className="text-2xl font-script text-white">Dashboard</h1>
+        <h1 className="text-2xl font-script text-white">{title}</h1>
       </div>
 
       {/* User Profile */}

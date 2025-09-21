@@ -1,23 +1,12 @@
 "use client";
 
 import StatCard from "@/components/StatCards";
-import Sidebar from "@/components/Sidebar";
-import { useAuth } from "@/contexts/AuthContext";
-import { useRouter } from "next/navigation";
 
 export default function AgentsPage() {
-  const { user, isAuthenticated, isLoading, logout } = useAuth();
-  const router = useRouter();
-  if (!isAuthenticated) {
-    router.push("/login");
-    return;
-  }
   return (
     <div className="min-h-screen bg-gray-900">
-      <Sidebar />
       <div className="ml-20">
         <main className="p-6">
-          {/* Stats Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <StatCard
               title="Number of Leads"

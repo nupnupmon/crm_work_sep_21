@@ -20,7 +20,7 @@ export default function ManagerPage() {
       <Sidebar />
 
       <div className="ml-20">
-        <Header user={user} onLogout={() => {}} />
+        <Header user={user} onLogout={() => {}} title={'Manager'}/>
         <Manager />
       </div>
     </div>

@@ -59,6 +59,12 @@ const Sidebar = () => {
       href: "/manager",
       active: pathname === "/manager",
     },
+    {
+      icon: "🧑‍💼",
+      label: "Client",
+      href: "/clients",
+      active: pathname === "/clients",
+    },
   ];
 
   return (

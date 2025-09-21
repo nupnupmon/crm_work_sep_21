@@ -47,7 +47,7 @@ export default function Dashboard() {
       <Sidebar />
       
       <div className="ml-20">
-        <Header user={user} onLogout={handleLogout} />
+        <Header user={user} onLogout={handleLogout} title={'Dashboard'} />
         
         <main className="p-6">
           {/* Welcome Section */}

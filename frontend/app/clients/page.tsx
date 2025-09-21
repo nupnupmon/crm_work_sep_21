@@ -1,7 +1,26 @@
 "use client";
 
 import Client from "@/src/Components/pages/client";
+import Sidebar from "../../components/Sidebar";
+import Header from "../../components/Header";
+import { useAuth } from "../../contexts/AuthContext";
+import { useRouter } from "next/navigation";
 
 export default function ClientsPage() {
-  return <Client />;
+  const { user, isAuthenticated, isLoading, logout } = useAuth();
+  const router = useRouter();
+  if (!isAuthenticated) {
+    router.push("/login");
+    return;
+  }
+  return (
+    <div className="min-h-screen bg-gray-900">
+      <Sidebar />
+
+      <div className="ml-20">
+        <Header user={user} onLogout={() => {}} title={'Clients'} />
+        <Client />
+      </div>
+    </div>
+  );
 }
