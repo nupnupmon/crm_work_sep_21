@@ -11,10 +11,15 @@ export default function ClientsPage() {
   const { user, isAuthenticated, isLoading, logout } = useAuth();
   const router = useRouter();
   useEffect(() => {
-    if (!isAuthenticated) {
-      router.push("/login");
+    if (!isLoading && !isAuthenticated) {
+      console.log('🚫 User not authenticated, redirecting to login')
+      router.push('/login')
     }
   }, [isAuthenticated, isLoading, router]);
+
+  if (!isAuthenticated) {
+    return null;
+  }
   return (
     <div className="min-h-screen bg-gray-900">
       <Sidebar />
