@@ -11,16 +11,17 @@ import Manager from "@/src/Components/pages/manager";
 export default function ManagerPage() {
   const { user, isAuthenticated, isLoading, logout } = useAuth();
   const router = useRouter();
-  if (!isAuthenticated) {
-    router.push("/login");
-    return;
-  }
+  useEffect(() => {
+    if (!isAuthenticated) {
+      router.push("/login");
+    }
+  }, [isAuthenticated]);
   return (
     <div className="min-h-screen bg-gray-900">
       <Sidebar />
 
       <div className="ml-20">
-        <Header user={user} onLogout={() => {}} title={'Manager'}/>
+        <Header user={user} onLogout={() => {}} title={"Manager"} />
         <Manager />
       </div>
     </div>
