@@ -5,7 +5,7 @@ import Sidebar from "@/components/Sidebar";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
 
-export default function AgentsPage() {
+export default function Client() {
   const { user, isAuthenticated, isLoading, logout } = useAuth();
   const router = useRouter();
   if (!isAuthenticated) {
