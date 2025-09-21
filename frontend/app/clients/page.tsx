@@ -14,7 +14,7 @@ export default function ClientsPage() {
     if (!isAuthenticated) {
       router.push("/login");
     }
-  }, [isAuthenticated]);
+  }, [isAuthenticated, isLoading, router]);
   return (
     <div className="min-h-screen bg-gray-900">
       <Sidebar />
