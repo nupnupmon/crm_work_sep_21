@@ -54,7 +54,7 @@ const Sidebar = () => {
       active: pathname === "/agents",
     },
     {
-      icon: "👥",
+      icon: "🧑‍💼",
       label: "Manager",
       href: "/manager",
       active: pathname === "/manager",
