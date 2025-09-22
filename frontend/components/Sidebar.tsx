@@ -42,12 +42,6 @@ const Sidebar = () => {
       active: pathname === "/customers",
     },
     {
-      icon: "⚙️",
-      label: "Settings",
-      href: "/settings",
-      active: pathname === "/settings",
-    },
-    {
       icon: "👥",
       label: "Agents",
       href: "/agents",
@@ -60,10 +54,16 @@ const Sidebar = () => {
       active: pathname === "/manager",
     },
     {
-      icon: "🧑‍💼",
+      icon: "👥",
       label: "Client",
       href: "/clients",
       active: pathname === "/clients",
+    },
+    {
+      icon: "⚙️",
+      label: "Settings",
+      href: "/settings",
+      active: pathname === "/settings",
     },
   ];
 
