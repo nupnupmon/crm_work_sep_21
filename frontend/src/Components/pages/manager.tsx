@@ -4,6 +4,7 @@ import StatCard from "@/components/StatCards";
 import AssetTable from "components/AssetTable";
 
 import { AssetData } from "@/src/types";
+import CustomerTable from "@/components/CustomerTable";
 
 const assets: AssetData[] = [
   {
@@ -86,6 +87,7 @@ export default function Manager() {
       </div>
 
       <AssetTable assets={assets} />
+      <CustomerTable />
     </div>
   );
 }
